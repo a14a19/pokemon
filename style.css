@@ -43,18 +43,19 @@ a {
     position: absolute;
     width: 300%;
     height: 1000%;
-    background: linear-gradient(
-        120deg,
-        #fb0202dd,
-        #2200ffdd
+    background-image: linear-gradient(
+        90deg,
+        #2980B9,
+        #6DD5FA,
+        #FFFFFF
     );
-    animation: background-animation 4s linear infinite;
+    animation: background-animation 6s linear infinite;
 }
 
 @keyframes background-animation {
     0% {
         transform: rotate(0deg);
-    }    
+    }
     100% {
         transform: rotate(360deg);
     }
@@ -119,8 +120,13 @@ a {
     width: 250px;
     height: 300%;
     background: linear-gradient(
-        #031dc2,
-        #d40000
+        90deg,
+        #2980B9,
+        #6DD5FA,
+        #FFFFFF,
+        #2980B9,
+        #6DD5FA,
+        #FFFFFF
     );
     animation: border-animation 4s linear infinite;
 }
@@ -161,10 +167,13 @@ a {
 
 @keyframes load{
     0% {
-        background-color: hsla(0, 99%, 50%, 0.100);
+        background-color: #297fb933;
+      }
+      50%{
+        background-color: #6dd4fa33;
       }
       100% {
-        background-color: hsla(232, 100%, 50%, 0.100);
+        background-color: #ffffff33;
       }
 }
 
@@ -210,10 +219,11 @@ a {
     height: 100%;
     background-image: linear-gradient(
         144deg,
-        #4053ff5b,
-        #eb00005d
+        #297fb9c3,
+        #6dd4fac3,
+        #ffffffc3
     );
-    color: whitesmoke;
+    color: black;
     display: grid;
     place-items: center;
     transform: translateX(105%);
