@@ -11,13 +11,15 @@ a {
     text-decoration: none;
 }
 
-::selection {
-    background: whitesmoke;
-    color: black;
+*::selection {
+    background: rgba(245, 245, 245, 0);
+    color: rgba(0, 0, 0, 0);
 }
 
 .main {
     padding: 10px 6% 53px 6%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,118 +28,84 @@ a {
     font-weight: 600;
     position: relative;
     overflow: hidden;
+    animation: backgroundColorPalette 10s alternate infinite;
 }
+
+  @keyframes backgroundColorPalette {
+    0% {
+      background: #40E0D080;
+    }
+    50% {
+      background:  #FF8C0080;
+    }
+    100% {
+      background: #FF008080;
+    }
+  }
 
 .main-card {
     position: relative;
-    z-index: 900;
-}
-
-.main::after {
-    content: "";
-    position: absolute;
-}
-
-.main::before{
-    content: "";
-    position: absolute;
-    width: 300%;
-    height: 1000%;
-    background-image: linear-gradient(
-        90deg,
-        #2980B9,
-        #6DD5FA,
-        #FFFFFF
-    );
-    animation: background-animation 6s linear infinite;
-}
-
-@keyframes background-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.main-card {
     margin: 0 auto;
-    width: 85vw;
-    height: 100vh;
+    width: 85%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-overflow: clip;
+    flex-wrap: wrap;
     overflow: auto;
     -ms-overflow-style: none;  
     scrollbar-width: none; 
-    padding: 0% 2%;
+    padding: 0% 2% 5% 2%;
     border: 2px solid black;
     border-radius: 20px;
-    background: #00007e39;
+    background: #00000020;
 }
 
 .main-card::-webkit-scrollbar {
     display: none;
-  }
-
-.sect-title {
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-.color-border {
-    position: relative;
-    width: 200px;
-    height: 75px;
-    min-height: 70px;
+.sect-title {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px;
     border-radius: 10px;
-    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 10px;
+    animation: borderAnime 5s alternate infinite;
 }
 
-.color-border h1 {
-    position: relative;
-    color: whitesmoke;
-    z-index: 1000;
-}
-
-.color-border::after {
-    content: "";
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    inset: 3px;
-}
-
-.color-border::before{
-    content: "";
-    position: absolute;
-    width: 250px;
-    height: 300%;
-    background: linear-gradient(
-        90deg,
-        #2980B9,
-        #6DD5FA,
-        #FFFFFF,
-        #2980B9,
-        #6DD5FA,
-        #FFFFFF
-    );
-    animation: border-animation 4s linear infinite;
-}
-
-@keyframes border-animation {
+@keyframes borderAnime {
     0% {
-        transform: rotate(0deg);
+        background: #00c3ff50;
     }    
-    100% {
-        transform: rotate(360deg);
+    50% {
+        background: #ffff1c50;
     }
+    100% {
+        background: #00c3ff50;
+    }
+}
+
+.p-icon {
+    width: 125px;
+}
+
+#starwar img {
+    width: 50px;
+    position: absolute;
+    left: 0.5%;
+    top: 0.5%;
+}
+
+#pokemon img {
+    width: 50px;
+    position: absolute;
+    right: 0.5%;
+    top: 0.5%;
 }
 
 .container {
@@ -157,32 +125,13 @@ a {
     white-space: normal;
 }
 
-.loading {
-    display: block;
-    justify-content: center;
-    width: 300px;
-    height: 25px;
-    animation: load 0.5s linear infinite alternate;
-}
-
-@keyframes load{
-    0% {
-        background-color: #297fb933;
-      }
-      50%{
-        background-color: #6dd4fa33;
-      }
-      100% {
-        background-color: #ffffff33;
-      }
-}
-
 #art-work {
     margin: 0 auto;
 }
 
 .artwork {
-    height: 250px;
+    height: 150px !important;
+    width: 100% !important;
 }
 
 .starwar-icon {
@@ -191,8 +140,8 @@ a {
 
 .get-random-charac {
     width: 20%;
-    min-width: 250px;
-    margin: 25px auto 0 auto;
+    min-width: 185px;
+    margin: 30px auto;
     display: flex;
 }
 
@@ -219,9 +168,9 @@ a {
     height: 100%;
     background-image: linear-gradient(
         144deg,
-        #297fb9c3,
-        #6dd4fac3,
-        #ffffffc3
+        #1FA2FF90,
+        #12D8FA90,
+        #A6FFCB90
     );
     color: black;
     display: grid;
