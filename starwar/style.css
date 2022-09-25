@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+*::selection{
+    background: rgba(0, 0, 0, 0);
+    color: rgba(245, 245, 245, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    padding: 10px 6% 53px 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    animation: backgroundColorPalette 6s alternate infinite;
+}
+
+  @keyframes backgroundColorPalette {
+    0% {
+      background: #40E0D080;
+    }
+    50% {
+      background:  #FF8C0080;
+    }
+    100% {
+      background: #FF008080;
+    }
+  }
+
+.main-card {
+    position: relative;
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 5% 2%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: #00000020;
+}
+
+.sect-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    animation: borderAnime 5s alternate infinite;
+}
+
+.sw-icon {
+    width: 125px;
+}
+
+#starwar img {
+    width: 50px;
+    position: absolute;
+    left: 0.5%;
+    top: 0.5%;
+}
+
+#pokemon img {
+    width: 50px;
+    position: absolute;
+    right: 0.5%;
+    top: 0.5%;
+}
+
+@keyframes borderAnime {
+    0% {
+        background: #031cc290;
+    }    
+    50% {
+        background: #d4000090;
+    }
+    100% {
+        background: #031cc290;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 25px auto;
+}
+
+.container div {
+    padding: 5px 0;
+}
+
+#film {
+    word-break: break-all;
+    white-space: normal;
+}
+
+.starwar-icon {
+    height: 20px;
+}
+
+.get-random-charac {
+    width: 20%;
+    min-width: 185px;
+    margin: 30px auto;
+    display: flex;
+}
+
+.sect-btn {
+    outline: none;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #ffffff00;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.sect-btn::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        144deg,
+        #4053ff5b,
+        #eb00005d
+    );
+    color: whitesmoke;
+    display: grid;
+    place-items: center;
+    transform: translateX(105%);
+    transition: transform .25s;
+}
+
+.sect-btn:hover::before {
+    transform: none;
+}
+
+.sect-btn span {
+    display: inline-block;
+    transition: transform .25s;
+}
+
+.sect-btn:hover span{
+    transform: translateX(-150%);
+}
+
+.social {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+}
+
+.social-icon{
+    color: black;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 14px;
+    border-left: 2px solid black;
+    padding: 5px;
+}
+
+.source {
+    display: inline;
+    position: absolute;
+    left: 8px;
+    bottom: 12px;
+}
+
+.source-link {
+    color: black;
+    font-size: 14px;
+}
+
+@media(max-width: 600px){
+    
+    .social {
+        position: absolute;
+        bottom: 22px;
+        left: 8px;
+    }
+
+    .source {
+        display: inline;
+        position: absolute;
+        left: 8px;
+        bottom: 5px;
+        font-size: 14px;
+    }
+
+}
