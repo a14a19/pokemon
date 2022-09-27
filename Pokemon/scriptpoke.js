@@ -7,6 +7,7 @@ const button = document.querySelector(".get-random-charac");
 const movesP = document.getElementById("moves");
 const artWorkP = document.getElementById("art-work");
 const artImg = document.createElement("img"); 
+const trackImg = document.getElementById("trackerImg");
 
 
 button.addEventListener('click', (e) => {
@@ -43,3 +44,8 @@ button.addEventListener('click', (e) => {
 })
 
 artWorkP.appendChild(artImg);
+
+
+document.addEventListener('mousemove', (e)=>{
+    trackImg.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px;`;
+})

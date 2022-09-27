@@ -7,6 +7,8 @@ const button = document.querySelector(".get-random-charac");
 const skinColor = document.getElementById("skin-color");
 const birthYear = document.getElementById("birth-year"); 
 const genderSw = document.getElementById("gender"); 
+const trackImg = document.getElementById("trackerImg");
+
 
 
 button.addEventListener('click', (e) => {
@@ -47,5 +49,7 @@ button.addEventListener('click', (e) => {
     
 })
 
-
+document.addEventListener('mouseover', (e)=>{
+    trackImg.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px;`;
+})
     
