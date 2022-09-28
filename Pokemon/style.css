@@ -248,4 +248,8 @@ a {
         font-size: 14px;
     }
 
+    #trackerImg {
+        display: none;
+    }
+
 }
