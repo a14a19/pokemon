@@ -34,7 +34,7 @@ a {
     font-weight: 600;
     position: relative;
     overflow: hidden;
-    animation: backgroundColorPalette 6s alternate infinite;
+    animation: backgroundColorPalette 10s alternate infinite;
 }
 
   @keyframes backgroundColorPalette {
@@ -52,17 +52,12 @@ a {
   .main-card {
     position: relative;
     margin: 0 auto;
-    width: 85%;
-    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-overflow: clip;
-    flex-wrap: wrap;
     overflow: auto;
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
     padding: 0% 2% 5% 2%;
     border: 2px solid black;
     border-radius: 20px;
@@ -113,7 +108,7 @@ a {
 .container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     margin: 25px auto;
 }
