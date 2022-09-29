@@ -24,6 +24,11 @@ a {
     height: 50px;
 }
 
+body{
+    position: relative;
+    animation: backgroundColorPalette 10s alternate infinite;
+}
+
 .main {
     padding: 10px 6% 53px 6%;
     display: flex;
@@ -34,7 +39,6 @@ a {
     font-weight: 600;
     position: relative;
     overflow: hidden;
-    animation: backgroundColorPalette 10s alternate infinite;
 }
 
   @keyframes backgroundColorPalette {
@@ -64,6 +68,17 @@ a {
     background: #00000020;
 }
 
+.main-card::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
 .sect-title {
     display: flex;
     justify-content: center;
@@ -72,6 +87,7 @@ a {
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 10px;
+    width: 140px;
     animation: borderAnime 5s alternate infinite;
 }
 
@@ -129,7 +145,7 @@ a {
 .get-random-charac {
     width: 20%;
     min-width: 185px;
-    margin: 30px auto;
+    margin: 20px auto;
     display: flex;
 }
 
@@ -181,6 +197,7 @@ a {
 
 .social {
     display: flex;
+    align-items: center;
     position: absolute;
     bottom: 8px;
     right: 12px;
@@ -206,7 +223,6 @@ a {
 
 .source-link {
     color: black;
-    font-size: 14px;
 }
 
 @media(max-width: 600px){
