@@ -128,6 +128,7 @@ header {
     align-items: center;
     flex-direction: column;
     margin: 25px auto;
+    width: 100%;
 }
 
 .container div {
@@ -136,6 +137,11 @@ header {
 .art-img{
     margin-top: 50px;
     height: 250px;
+}
+#wiki {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #film {
     word-break: break-all;
@@ -230,7 +236,15 @@ header {
 }
 
 @media(max-width: 600px){
-    
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 25px auto;
+        width: 100%;
+    }
     .social {
         position: absolute;
         bottom: 22px;
