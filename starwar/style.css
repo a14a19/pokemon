@@ -13,7 +13,8 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: black !important;
 }
 
 #trackerImg {
@@ -132,7 +133,10 @@ header {
 .container div {
     padding: 5px 0;
 }
-
+.art-img{
+    margin-top: 50px;
+    height: 250px;
+}
 #film {
     word-break: break-all;
     white-space: normal;

@@ -1,52 +1,52 @@
+const button = document.querySelector(".get-random-charac");
 const nameSw = document.getElementById("name");
 const heightSw = document.getElementById("height");
 const massSw = document.getElementById("mass");
-const homeworld = document.getElementById("homeworld");
-const hairColor = document.getElementById("hair-color");
-const button = document.querySelector(".get-random-charac");
-const skinColor = document.getElementById("skin-color");
-const birthYear = document.getElementById("birth-year"); 
 const genderSw = document.getElementById("gender"); 
+const homeworldSw = document.getElementById("homeworld");
+const speciesSw = document.getElementById("species");
+const wikiSw = document.getElementById("wiki");
+const birthYear = document.getElementById("birth-year"); 
 const trackImg = document.getElementById("trackerImg");
+const artWork = document.getElementById('art-work');
+const artImg = document.createElement('img');
 
-
+artWork.appendChild(artImg);
 
 button.addEventListener('click', (e) => {
     e.preventDefault()
     nameSw.innerText = `Loading...`;
     heightSw.innerText = `Loading...`;
     massSw.innerText = `Loading...`;
-    hairColor.innerText = `Loading...`;
-    EyeColor.innerText = `Loading...`;
-    skinColor.innerText = `Loading...`;
-    birthYear.innerText = `Loading...`;
     genderSw.innerText = `Loading...`;
+    speciesSw.innerText = `Loading...`;
+    homeworldSw.innerText = `Loading...`;
+    wikiSw.innerText = `Loading...`;
     
-    const numRandom = parseInt(Math.ceil(Math.random()*83));
-
-    const urlSw = "https://swapi.dev/api/people/";
+    const numRandom = `${parseInt(Math.ceil(Math.random()*83))}.json`;
+    const urlSw = "https://akabab.github.io/starwars-api/api/id/";
 
     fetch(`${urlSw}${numRandom}`)
     .then(Response => Response.json())
     .then(character => {
         // console.log(character.name)
+        const {name, height, mass, gender, species, homeworld, image, wiki} = character
 
-        const {name, height, mass, hair_color, eye_color, skin_color, birth_year, gender} = character
-
-        if(name, height, mass, hair_color, eye_color, skin_color, birth_year, gender == ""){
+        if(name, height, mass, gender, species, homeworld, image, wiki == ""){
             throw new Error("Undefined")
         }
-
+        artImg.src = `${image}`;
+        artImg.classList.add('art-img')
         nameSw.innerText = `Name: ${name}`;
         heightSw.innerText = `Height: ${height}`;
         massSw.innerText = `Mass: ${mass}`;
-        hairColor.innerText = `Hair color: ${hair_color}`;
-        EyeColor.innerText = `Eye Color: ${eye_color}`;
-        skinColor.innerText = `Skin color: ${skin_color}`;
-        birthYear.innerText = `Birth year: ${birth_year}`;
         genderSw.innerText = `Gender: ${gender}`;
+        speciesSw.innerText = `Species: ${species}`;
+        homeworldSw.innerText = `Home World: ${homeworld}`;
+        wikiSw.innerText = `Wiki: ${wiki}`;
+        wikiSw.href = `${wiki}`;
     })
-    
+
 })
 
 document.addEventListener('mouseover', (e)=>{
